@@ -1,14 +1,17 @@
 import './App.css';
+import Antonio from "./assets/antonio.jpg";
 
 function App() {
   return (
     <div className="App">
-      <h1>avancando no react</h1>
-      <h2>testando react</h2>
+      <h1>testando insercao de imagens no react</h1>
       {/* imagem em public */}
       <div>
         <img src="/5crzya58wzp21.jpg" alt="imagem aleatoria" />
-        <img src="scr/assets/antonio.jpg" alt="" />
+      </div>
+      {/* imagem em assets */}
+      <div>
+        <img src={Antonio} alt="Eu" />
       </div>
     </div>
   );
