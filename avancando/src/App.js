@@ -8,6 +8,7 @@ function App() {
       {/* imagem em public */}
       <div>
         <img src="/5crzya58wzp21.jpg" alt="imagem aleatoria" />
+        <img src="scr/assets/antonio.jpg" alt="" />
       </div>
     </div>
   );
