@@ -1,5 +1,6 @@
 import './App.css';
 import Antonio from "./assets/antonio.jpg";
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div>
         <img src={Antonio} alt="Eu" />
       </div>
+      <ManageData/>
     </div>
   );
 }
