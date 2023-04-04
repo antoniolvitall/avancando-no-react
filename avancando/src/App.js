@@ -8,6 +8,7 @@ import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragments from './components/Fragments';
+import Container from './components/Container';
 
 
 function App() {
@@ -45,6 +46,13 @@ const cars = [
       ))}
       {/* fragments */}
       <Fragments propFragment="teste" />
+      {/* children */}
+      <Container myValue="testing" >
+        <p>Este e o conteudo</p>
+      </Container>
+      <Container myValue="testing 2" >
+        <h5>Testando container</h5>
+      </Container>
     </div>
   );
 };
