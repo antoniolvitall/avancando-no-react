@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import './App.css';
+
 import Antonio from "./assets/antonio.jpg";
 import CondicionalRender from './components/CondicionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
+import Fragments from './components/Fragments';
+
 
 function App() {
 const [userName] = useState("Marcela");
@@ -39,7 +42,9 @@ const cars = [
       {/* loop em array de objetos */}
       {cars.map((car) => (
         <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} />
-      ))};
+      ))}
+      {/* fragments */}
+      <Fragments propFragment="teste" />
     </div>
   );
 };
