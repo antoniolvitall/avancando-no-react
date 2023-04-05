@@ -9,15 +9,20 @@ import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragments from './components/Fragments';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 
 function App() {
 const [userName] = useState("Marcela");
 const cars = [
   {id:1, brand:"Ferrari", color: "Vermelha", newCar: true, km: 0},
-  {id:1, brand:"Jaguar", color: "Preto", newCar: false, km: 20000},
-  {id:1, brand:"Jeep", color: "Verde", newCar: false, km: 30000},
-]
+  {id:2, brand:"Jaguar", color: "Preto", newCar: false, km: 20000},
+  {id:3, brand:"Jeep", color: "Verde", newCar: false, km: 30000},
+];
+
+  function showMessage () {
+    console.log("Evento do componente pai~")
+  };
 
   return (
     <div className="App">
@@ -42,7 +47,7 @@ const cars = [
       <CarDetails brand="Honda" color="branco" km={0} newCar={true} />
       {/* loop em array de objetos */}
       {cars.map((car) => (
-        <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} />
+        <CarDetails key={car.id} brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} />
       ))}
       {/* fragments */}
       <Fragments propFragment="teste" />
@@ -53,6 +58,8 @@ const cars = [
       <Container myValue="testing 2" >
         <h5>Testando container</h5>
       </Container>
+      {/* executar funcao */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 };
